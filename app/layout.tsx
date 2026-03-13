@@ -18,7 +18,7 @@ const dmSans = DM_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "MK Portfolio | Full-Stack Developer",
+  title: "Oudenani | Full-Stack Developer",
   description:
     "Full-Stack MERN developer specializing in high-performance, scalable web applications.",
 };
