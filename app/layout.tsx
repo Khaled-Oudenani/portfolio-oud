@@ -4,7 +4,6 @@ import { ThemeProvider } from "next-themes";
 import Navbar from "@/app/components/ui/Navbar";
 import Footer from "@/app/components/ui/Footer";
 import "./globals.css";
-import Head from "next/head";
 
 const syne = Syne({
   subsets: ["latin"],
@@ -31,12 +30,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <Head>
+      <head>
         <meta
           name="google-site-verification"
           content="google5390465a8a712906"
         />
-      </Head>
+      </head>
       <body
         className={`${syne.variable} ${dmSans.variable} font-sans antialiased bg-white dark:bg-slate-950 text-slate-900 dark:text-white transition-colors duration-300`}
       >
