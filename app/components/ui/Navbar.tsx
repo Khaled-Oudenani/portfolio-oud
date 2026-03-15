@@ -63,7 +63,7 @@ export default function Navbar() {
             >
               <button
                 onClick={() => scrollTo(item.href)}
-                className="text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-sky-500 dark:hover:text-sky-400 transition-colors"
+                className="text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-sky-500 dark:hover:text-sky-400 hover:scale-110 cursor-pointer transition-colors"
               >
                 {item.label}
               </button>
@@ -77,7 +77,7 @@ export default function Navbar() {
               onClick={() =>
                 setTheme(resolvedTheme === "dark" ? "light" : "dark")
               }
-              className="w-9 h-9 rounded-full border border-slate-200 dark:border-slate-700 flex items-center justify-center text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"
+              className="w-9 h-9 rounded-full border border-slate-200 dark:border-slate-700 flex items-center justify-center cursor-pointer text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
             >
@@ -109,7 +109,7 @@ export default function Navbar() {
 
           <motion.button
             onClick={() => scrollTo("#contact")}
-            className="hidden md:flex items-center px-4 py-2 rounded-full bg-sky-500 text-white text-sm font-semibold hover:bg-sky-600 transition-colors"
+            className="hidden md:flex items-center px-4 py-2 rounded-full cursor-pointer bg-sky-500 text-white text-sm font-semibold hover:bg-sky-600 transition-colors"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
