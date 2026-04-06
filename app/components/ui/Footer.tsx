@@ -21,12 +21,12 @@ export default function Footer() {
         <div className="flex items-center gap-3">
           {[
             {
-              href: "https://github.com",
+              href: "https://github.com/Khaled-Oudenani",
               icon: <Github size={16} />,
               label: "GitHub",
             },
             {
-              href: "https://linkedin.com",
+              href: "https://linkedin.com/in/khaled-oudenani/",
               icon: <Linkedin size={16} />,
               label: "LinkedIn",
             },

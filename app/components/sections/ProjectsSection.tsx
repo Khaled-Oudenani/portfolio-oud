@@ -99,16 +99,16 @@ export default function ProjectsSection() {
               Selected Works
             </motion.h2>
             <motion.p variants={fadeInUp} className="text-slate-400 text-sm">
-              A showcase of recent applications built from scratch.
+              A showcase of recent applications.
             </motion.p>
           </div>
-          <motion.a
+          {/* <motion.a
             variants={fadeInUp}
             href="#"
             className="text-sky-500 text-sm font-semibold hover:underline whitespace-nowrap"
           >
             View All Projects →
-          </motion.a>
+          </motion.a> */}
         </motion.div>
 
         <motion.div

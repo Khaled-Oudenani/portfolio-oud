@@ -23,6 +23,15 @@ export const SKILLS: Skill[] = [
 
 export const PROJECTS: Project[] = [
   {
+    title: "LinkForge",
+    description:
+      "A web application that enables users to create personalized bio link pages, allowing them to showcase their social media profiles, websites, and other important links in a visually appealing and organized manner.",
+    image: "/linkforg.jpg",
+    tags: ["Next js", "Supabase", "Gemini api"],
+    demoUrl: "https://bio-link-builder-with-ai.vercel.app/",
+    githubUrl: "https://github.com/Khaled-Oudenani/bio-link-builder-with-ai",
+  },
+  {
     title: "University Information Platform",
     description:
       "A web platform designed to organize and present university information, including a directory of students and professors, research laboratories, and scientific events.",
