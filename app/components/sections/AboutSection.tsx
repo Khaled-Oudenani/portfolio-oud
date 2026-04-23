@@ -9,7 +9,8 @@ import {
   staggerContainer,
   scaleIn,
 } from "@/lib/animations";
-import khaled from "@/public/khaled.png";
+// import khaled from "@/public/khaled.png";
+import portImg from "@/public/port-img.png";
 import Image from "next/image";
 
 export default function AboutSection() {
@@ -49,7 +50,7 @@ export default function AboutSection() {
                 <div className="absolute -inset-3 rounded-3xl border-2 border-slate-200 dark:border-slate-700/50 rotate-3" />
                 <div className="relative rounded-2xl overflow-hidden bg-gradient-to-br from-sky-200 to-teal-100 dark:from-slate-800 dark:to-slate-600 aspect-square flex items-center justify-center shadow-xl">
                   <Image
-                    src={khaled}
+                    src={portImg}
                     alt="Khaled Oudenani"
                     className="w-full h-auto rounded-2xl object-cover"
                   />
