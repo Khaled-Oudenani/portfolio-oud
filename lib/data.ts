@@ -71,8 +71,8 @@ export const PROJECTS: Project[] = [
 
 export const STATS: Stat[] = [
   { value: "10+", label: "Projects" },
-  { value: "1+", label: "Years Exp" },
-  { value: "N/", label: "Clients" },
+  { value: "2+", label: "Years Exp" },
+  { value: "1", label: "Clients" },
 ];
 
 export const CONTACT_INFO: ContactInfo[] = [

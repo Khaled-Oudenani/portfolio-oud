@@ -16,7 +16,7 @@ export default function Footer() {
           </span>
         </div>
         <p className="text-xs text-slate-400">
-          © {new Date().getFullYear()} Mohammed. All rights reserved.
+          © {new Date().getFullYear()} Khaled. All rights reserved.
         </p>
         <div className="flex items-center gap-3">
           {[
