@@ -22,6 +22,15 @@ export const SKILLS: Skill[] = [
 ];
 
 export const PROJECTS: Project[] = [
+   {
+    title: "Dental Clinic Management",
+    description:
+      "Developed a web application for managing a dental clinic, including patient records, appointment scheduling, and treatment planning.",
+    image: "/dental.png",
+    tags: ["React", "Express js", "MongoDB", "cloudinary"],
+    demoUrl: "https://khaled-dental.netlify.app/",
+    githubUrl: "https://github.com/Khaled-Oudenani/dental-clinic",
+  },
   {
     title: "ai-quizcraft",
     description:
