@@ -164,7 +164,7 @@ export default function HeroSection() {
                 View Projects <ArrowRight size={16} />
               </motion.button>
               <motion.a
-                href="/khaled oudenani - Professional Cv Resume.pdf"
+                href="/Khaled_Oudenani_CV.pdf"
                 download
                 className="flex items-center gap-2 px-6 py-3 rounded-full border border-slate-300 dark:border-slate-600 text-slate-700 dark:text-slate-200 font-semibold hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors"
                 whileHover={{ scale: 1.05 }}
