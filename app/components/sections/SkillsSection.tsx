@@ -53,7 +53,18 @@ export default function SkillsSection() {
               className={`group relative flex flex-col items-center gap-3 p-6 rounded-2xl bg-gradient-to-br ${skill.color} border border-slate-100 dark:border-slate-800 cursor-default overflow-hidden`}
             >
               <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 ring-1 ring-inset ring-sky-400/30 rounded-2xl" />
-              <span className="text-3xl">{skill.icon}</span>
+              {skill.icon === "supabase" ? (
+                <svg
+                  aria-hidden="true"
+                  className="h-8 w-8 text-emerald-500"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                >
+                  <path d="M11.9 1.036c-.015-.986-1.26-1.41-1.874-.637L.764 12.05C-.33 13.427.65 15.455 2.409 15.455h9.579l.113 7.51c.014.985 1.259 1.408 1.873.636l9.262-11.653c1.093-1.375.113-3.403-1.645-3.403h-9.642z" />
+                </svg>
+              ) : (
+                <span className="text-3xl">{skill.icon}</span>
+              )}
               <span className="text-sm font-semibold text-slate-700 dark:text-slate-200">
                 {skill.name}
               </span>

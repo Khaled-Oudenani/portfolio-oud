@@ -8,6 +8,7 @@ export const NAV_ITEMS: NavItem[] = [
 
 export const SKILLS: Skill[] = [
   { name: "MongoDB", icon: "🍃", color: "from-green-500/20 to-green-600/10" },
+  { name: "Supabase", icon: "supabase", color: "from-emerald-500/20 to-emerald-600/10" },
   { name: "Express", icon: "⚡", color: "from-gray-500/20 to-gray-600/10" },
   { name: "React", icon: "⚛️", color: "from-cyan-500/20 to-cyan-600/10" },
   { name: "Node.js", icon: "🟢", color: "from-green-600/20 to-green-700/10" },
@@ -81,7 +82,7 @@ export const PROJECTS: Project[] = [
 export const STATS: Stat[] = [
   { value: "10+", label: "Projects" },
   { value: "2+", label: "Years Exp" },
-  { value: "1", label: "Clients" },
+  // { value: "1", label: "Clients" },
 ];
 
 export const CONTACT_INFO: ContactInfo[] = [
