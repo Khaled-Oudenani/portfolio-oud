@@ -23,6 +23,15 @@ export const SKILLS: Skill[] = [
 ];
 
 export const PROJECTS: Project[] = [
+  {
+    title: "Sweet Bloom",
+    description:
+      "A full-stack online store for an artisan dessert shop, featuring product browsing, custom cake requests, guest checkout, and an admin dashboard.",
+    image: "/sweet.png",
+    tags: ["Next.js", "TypeScript", "Express", "PostgreSQL"],
+    demoUrl: "https://sweet-bloom1.vercel.app/",
+    githubUrl: "https://github.com/Khaled-Oudenani/sweet-bloom",
+  },
    {
     title: "Dental Clinic Management",
     description:
@@ -68,15 +77,15 @@ export const PROJECTS: Project[] = [
     demoUrl: "https://kids-stories-eta.vercel.app/",
     githubUrl: "https://github.com/Khaled-Oudenani/kids-stories-full-stack",
   },
-  {
-    title: "Recipe Finder",
-    description:
-      "Developed a web application that allows users to search and explore a variety of food recipes through a clean and user-friendly interface.",
-    image: "/food.jpg",
-    tags: ["React", "api"],
-    demoUrl: "https://khaled-foody.netlify.app/",
-    githubUrl: "https://github.com/Khaled-Oudenani/foody-app",
-  },
+  // {
+  //   title: "Recipe Finder",
+  //   description:
+  //     "Developed a web application that allows users to search and explore a variety of food recipes through a clean and user-friendly interface.",
+  //   image: "/food.jpg",
+  //   tags: ["React", "api"],
+  //   demoUrl: "https://khaled-foody.netlify.app/",
+  //   githubUrl: "https://github.com/Khaled-Oudenani/foody-app",
+  // },
 ];
 
 export const STATS: Stat[] = [
