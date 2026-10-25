@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useTheme } from "next-themes";
 import { Sun, Moon, Menu, X } from "lucide-react";
 import { NAV_ITEMS } from "@/lib/data";
+import Link from "next/link";
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -23,7 +24,10 @@ export default function Navbar() {
     setMobileOpen(false);
     setTimeout(() => {
       const el = document.querySelector(href);
-      if (!el) return;
+      if (!el) {
+        window.location.assign(`/${href}`);
+        return;
+      }
       const top = el.getBoundingClientRect().top + window.scrollY - 64;
       window.scrollTo({ top, behavior: "smooth" });
     }, 100);
@@ -42,7 +46,7 @@ export default function Navbar() {
     >
       <nav className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
         <motion.a
-          href="#"
+          href="/"
           className="flex items-center gap-2 font-bold text-lg"
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
@@ -61,12 +65,12 @@ export default function Navbar() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.1 + i * 0.07 }}
             >
-              <button
-                onClick={() => scrollTo(item.href)}
+              <a
+                href={`/${item.href}`}
                 className="text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-sky-500 dark:hover:text-sky-400 hover:scale-110 cursor-pointer transition-colors"
               >
                 {item.label}
-              </button>
+              </a>
             </motion.li>
           ))}
         </ul>
@@ -136,12 +140,13 @@ export default function Navbar() {
             <ul className="px-6 py-4 flex flex-col gap-4">
               {NAV_ITEMS.map((item) => (
                 <li key={item.href}>
-                  <button
-                    onClick={() => scrollTo(item.href)}
+                  <Link
+                    href={`/${item.href}`}
+                    onClick={() => setMobileOpen(false)}
                     className="text-slate-700 dark:text-slate-200 font-medium hover:text-sky-500 transition-colors"
                   >
                     {item.label}
-                  </button>
+                  </Link>
                 </li>
               ))}
               <li>

@@ -6,6 +6,7 @@ import { ExternalLink, Github } from "lucide-react";
 import { PROJECTS } from "@/lib/data";
 import { fadeInUp, staggerContainer } from "@/lib/animations";
 import Image from "next/image";
+import Link from "next/link";
 
 function ProjectCard({
   project,
@@ -15,24 +16,30 @@ function ProjectCard({
   index: number;
 }) {
   return (
-    <motion.div
+    <motion.article
       variants={fadeInUp}
       custom={index}
       whileHover={{ y: -8 }}
       transition={{ duration: 0.3, ease: "easeOut" }}
-      className="group bg-white dark:bg-slate-900 rounded-2xl overflow-hidden border border-slate-100 dark:border-slate-800 shadow-sm hover:shadow-xl hover:shadow-slate-200/60 dark:hover:shadow-slate-900/60 transition-shadow duration-300"
+      className="group relative bg-white dark:bg-slate-900 rounded-2xl overflow-hidden border border-slate-100 dark:border-slate-800 shadow-sm hover:shadow-xl hover:shadow-slate-200/60 dark:hover:shadow-slate-900/60 transition-shadow duration-300"
     >
-      <div className="relative overflow-hidden aspect-video bg-gradient-to-br from-slate-100 to-slate-200 dark:from-slate-800 dark:to-slate-700">
+      <Link
+        href={`/projects/${project.slug}`}
+        aria-label={`View ${project.title} project details`}
+        className="absolute inset-0 z-10 rounded-2xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-sky-500"
+      />
+      <div className="pointer-events-none relative overflow-hidden aspect-video bg-gradient-to-br from-slate-100 to-slate-200 dark:from-slate-800 dark:to-slate-700">
         <Image
           src={project.image}
           fill
           alt={project.title}
           className="object-cover"
+          sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
         />
         <div className="absolute inset-0 bg-sky-500/0 group-hover:bg-sky-500/10 transition-colors duration-300" />
       </div>
 
-      <div className="p-5">
+      <div className="pointer-events-none relative p-5">
         <div className="flex gap-2 mb-3 flex-wrap">
           {project.tags.map((tag) => (
             <span
@@ -49,7 +56,7 @@ function ProjectCard({
         <p className="text-slate-500 dark:text-slate-400 text-sm leading-relaxed mb-4 line-clamp-3">
           {project.description}
         </p>
-        <div className="flex gap-3">
+        <div className="relative z-20 flex gap-3 pointer-events-auto">
           <motion.a
             href={project.demoUrl}
             target="_blank"
@@ -70,7 +77,7 @@ function ProjectCard({
           </motion.a>
         </div>
       </div>
-    </motion.div>
+    </motion.article>
   );
 }
 

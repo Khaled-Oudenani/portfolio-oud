@@ -19,6 +19,7 @@ A modern, high-performance personal portfolio built with **Next.js 16 (App Route
 - **🌓 Dark & Light Mode:** System-aware theme toggle with persistent storage using `next-themes`.
 - **💻 Interactive Code Simulation:** Animated VS Code editor widget showcasing developer profile data.
 - **📂 Project Showcase:** Detailed cards displaying tech stacks, live previews, and repository links.
+- **🔎 Project Detail Pages:** Open a dedicated page for each project directly from its card.
 - **📬 Working Contact Form:** Client-side form handling and submission powered by `@web3forms/react`.
 - **📱 Fully Responsive:** Optimized for all screen sizes from mobile phones to high-resolution desktops.
 
@@ -58,6 +59,9 @@ portfolio-oud/
 │   │   └── ui/
 │   │       ├── Footer.tsx            # Footer component
 │   │       └── Navbar.tsx            # Responsive navigation & theme toggle
+│   ├── projects/
+│   │   └── [slug]/
+│   │       └── page.tsx               # Individual project details
 │   ├── favicon.ico
 │   ├── globals.css                   # Global styles & Tailwind CSS imports
 │   ├── layout.tsx                    # Root layout with theme provider
